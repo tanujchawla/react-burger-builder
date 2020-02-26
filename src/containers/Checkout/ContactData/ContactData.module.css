@@ -8,9 +8,9 @@
     box-sizing: border-box;
 }
 
-.ContactData input {
+/* .ContactData input {
     display: block;
-}
+} */
 
 @media(min-width : 600px) {
     .ContactData  {
