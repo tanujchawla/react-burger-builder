@@ -21,10 +21,10 @@ class BurgerBuilder extends Component {
     state = {
         ingredients : null,
         totalPrice : 4,
-        purchasable : false,
-        purchasing : false,
-        loading : false,
-        error : false
+        purchasable : false,// Local UI State but being passed between components
+        purchasing : false,// Local UI State
+        loading : false,// Local UI State
+        error : false// Local UI State
     }
 
     componentDidMount() {
