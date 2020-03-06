@@ -54,19 +54,21 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        const queryParams = [];
+        ////// Don't need query params when using redux
 
-        for(let i in this.state.ingredients) {
-            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
-        }
+        // const queryParams = [];
 
-        queryParams.push('price=' + this.state.totalPrice);
+        // for(let i in this.state.ingredients) {
+        //     queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+        // }
 
-        const queryString = queryParams.join('&');
+        // queryParams.push('price=' + this.state.totalPrice);
+
+        // const queryString = queryParams.join('&');
 
         this.props.history.push({
-            pathname : '/checkout',
-            search : '?' + queryString
+            pathname : '/checkout'
+            // search : '?' + queryString
         });
     }
 
