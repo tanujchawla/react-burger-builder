@@ -9,10 +9,12 @@ import orderReducer from './store/reducers/order';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
+import authReducer from './store/reducers/auth';
 
 const rootReducer = combineReducers({
     burgerBuilder : burgerBuilderReducer,
-    order : orderReducer
+    order : orderReducer,
+    auth : authReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
